@@ -1,0 +1,16 @@
+.example-pizza-party {
+    color: hotpink;
+    position: absolute;
+    top: 30%;
+    left: 30%;
+    z-index: 999999;
+  }
+
+  .mat-snackbar-container {
+      position: relative;
+  }
+
+  .cdk-overlay-pane {
+    position: static;
+    margin-top: 0px;
+  }

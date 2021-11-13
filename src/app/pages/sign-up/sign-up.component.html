@@ -1,0 +1,24 @@
+<div class="row">
+
+    <div class="alert alert-danger" *ngIf="error">
+        {{error}}
+    </div>
+    <div class="col-md-6 offset-md-3 card mt-5">
+       <form class="p-5 justify-content-center" [formGroup]="userForm" (ngSubmit)="onSubmit()">
+           <div class="form-group fs-6">
+              <mat-form-field class="w-100">
+                  <mat-label >Email</mat-label>
+                  <input type="email" matInput placeholder="Ex. pat@example.com" formControlName="email">
+              </mat-form-field>
+           </div>
+           <div class="form-group fs-6">
+              <mat-form-field class="w-100">
+                  <mat-label>Password</mat-label>
+                  <input type="password" matInput formControlName="password">
+              </mat-form-field>
+           </div>
+
+           <button (click)="openSnackBar()" type="submit" [disabled]="!userForm.valid" class="mt-3 fs-6" color="primary" mat-raised-button>Sign Up</button>
+       </form>
+    </div>
+</div>
